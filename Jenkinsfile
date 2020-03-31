@@ -1,12 +1,12 @@
 pipeline {
-  agent none
+  agent any
+
   stages {
-    stage('Deploy') {
-      agent any
+    stage('pull code') {
       steps {
         echo 'Deploying'
         sh './deploy_jenkins.sh'
+         }
       }
-    }
-  }
+   }
 }
