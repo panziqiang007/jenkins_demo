@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('pull code') {
       steps {
-        echo 'Deploying'
-        sh './deploy_jenkins.sh'
+      	sh label: '', script: 'sh deploy_jenkins.sh'
          }
       }
    }
