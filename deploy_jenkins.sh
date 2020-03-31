@@ -19,6 +19,8 @@
 # docker rmi --force "docker images | grep -w $CONTAINER | awk '{print $3}'"
 
 # 创建新镜像
+echo '创建新镜像'
+
 docker build -t jenkins_demo:v1 .
 
 # 删除 docker-compose.jenkins.yml 文件，防止使用相同镜像
